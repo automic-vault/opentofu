@@ -1,3 +1,22 @@
+# Automic Vault Fork Notes
+
+This repository is the Automic Vault fork of OpenTofu.
+
+Automic Vault is a macOS-first system that keeps developer credentials in
+custody and applies them only after policy or the user allows the complete
+operation requested by verified software.
+
+The [OpenTofu Isotope work](https://github.com/automic-vault/automic-vault/pull/187)
+uses OpenTofu's native credential-helper protocol to keep host tokens out of
+plaintext configuration. Automic Vault's reviewed release workflow builds and
+signs the pinned executable with Hardened Runtime; the Hardener verifies its
+release digest and Automic Vault signature before installation.
+
+This source fork alone does not establish Hardened State. The remainder of this
+README is the original upstream OpenTofu README.
+
+---
+
 ![](https://raw.githubusercontent.com/opentofu/brand-artifacts/main/full/transparent/SVG/on-dark.svg#gh-dark-mode-only)
 ![](https://raw.githubusercontent.com/opentofu/brand-artifacts/main/full/transparent/SVG/on-light.svg#gh-light-mode-only)
 
