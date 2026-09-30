@@ -5,9 +5,9 @@ replaces:
   brew:opentofu
 
 build: |
-  GOTOOLCHAIN=go1.26.6 go test -mod=readonly ./internal/command/cliconfig
+  GOTOOLCHAIN=go1.27.1 go test -mod=readonly ./internal/command/cliconfig
   mkdir -p bin
-  GOTOOLCHAIN=go1.26.6 CGO_ENABLED=0 go build \
+  GOTOOLCHAIN=go1.27.1 CGO_ENABLED=0 go build \
     -mod=readonly -trimpath \
     -ldflags "-s -w -X github.com/opentofu/opentofu/version.dev=no" \
     -o bin/tofu ./cmd/tofu
